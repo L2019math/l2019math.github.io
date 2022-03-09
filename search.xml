@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Hello World</title>
+      <link href="/hello-world/"/>
+      <url>/hello-world/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一键三连">一键三连</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><h2 id="HexoSourceRepo">HexoSourceRepo</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 移除仓库，重新添加</span><br><span class="line">git remote rm origin</span><br><span class="line">git remote add origin git@github.com:L2019math/text.git</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 添加文件到暂存区</span><br><span class="line">git add .</span><br><span class="line">// 提交到仓库中 ，引号内为描述操作</span><br><span class="line">git commit -m &quot;commit by Selfknow&quot;</span><br><span class="line">// push 到远程服务器（github）</span><br><span class="line">git push origin main</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="本地资料丢失或多-PC-同步">本地资料丢失或多 PC 同步</h3><p>当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：</p><ol><li><strong>使用</strong> <code>git clone git@github.com:Username/[HexoSourceRepo].git</code> 拷贝仓库；<br>此处的 <code>[HexoSourceRepo]</code> 指代上述博客源码存放方案中存放源码的仓库名。</li><li>在本地新拷贝的 <code>[HexoSourceRepo]</code> 文件夹下通过终端依次执行下列指令：</li></ol><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><h2 id="常见Bug">常见Bug</h2><p><a href="https://blog.csdn.net/gongdamrgao/article/details/115032436">error: src refspec main does not match any</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>三十长难句赏析</title>
       <link href="/Kaoyan_learning/English/long-difficult-sentence/"/>
       <url>/Kaoyan_learning/English/long-difficult-sentence/</url>
@@ -23,19 +36,6 @@
             <tag> English </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/hello-world/"/>
-      <url>/hello-world/</url>
-      
-        <content type="html"><![CDATA[<h2 id="一键三连">一键三连</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><h2 id="HexoSourceRepo">HexoSourceRepo</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 移除仓库，重新添加</span><br><span class="line">git remote rm origin</span><br><span class="line">git remote add origin git@github.com:L2019math/text.git</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 添加文件到暂存区</span><br><span class="line">git add .</span><br><span class="line">// 提交到仓库中 ，引号内为描述操作</span><br><span class="line">git commit -m &quot;commit by Selfknow&quot;</span><br><span class="line">// push 到远程服务器（github）</span><br><span class="line">git push origin main</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="本地资料丢失或多-PC-同步">本地资料丢失或多 PC 同步</h3><p>当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：</p><ol><li><strong>使用</strong> <code>git clone git@github.com:Username/[HexoSourceRepo].git</code> 拷贝仓库；<br>此处的 <code>[HexoSourceRepo]</code> 指代上述博客源码存放方案中存放源码的仓库名。</li><li>在本地新拷贝的 <code>[HexoSourceRepo]</code> 文件夹下通过终端依次执行下列指令：</li></ol><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><h2 id="常见Bug">常见Bug</h2><p><a href="https://blog.csdn.net/gongdamrgao/article/details/115032436">error: src refspec main does not match any</a></p>]]></content>
-      
-      
       
     </entry>
     
