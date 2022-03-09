@@ -551,3 +551,10 @@ img[src*="#img-radius"] {
 .fa-bullhorn:before {
     content: "\f0a1";
 }
+
+/* 无序列表小圆点 */
+#article-container li::marker {
+    color: #49b1f5;
+    font-weight: 600;
+    font-size: 0em;
+}
