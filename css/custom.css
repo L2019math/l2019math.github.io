@@ -1,0 +1,553 @@
+/* 字体修改 */
+
+
+/* @font-face {
+    font-family:'arzhu';
+    src: url('../font/ZCOOLKuaiLe-Regular.ttf');
+    font-display:swap
+}
+h1#site-title {
+    font-family:arzhu!important
+}
+span#subtitle {
+    font-family:arzhu!important
+}
+a#site-name {
+    font-family:arzhu!important
+} */
+
+
+/* top-img 去掉黑色不透明遮罩 */
+
+
+/* #page-header::before{background:transparent !important;} */
+
+
+/* 有序列表 */
+
+#article-container.post-content ol>li:before {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 20px;
+    margin-left: -5px;
+}
+
+#article-container ol li::before,
+#article-container ul li::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgb(129, 216, 207);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.3s ease-out 0s;
+}
+
+
+/* 全局背景透明渐变 */
+
+#recent-posts>.recent-post-item,
+.layout_page>div:first-child:not(.recent-posts),
+.layout_post>#page,
+.layout_post>#post,
+.read-mode .layout_post>#post {
+    background: var(--light_bg_color)
+}
+
+#aside-content .card-widget {
+    background: var(--light_bg_color)
+}
+
+#web_bg {
+    background: linear-gradient(90deg, rgba(247, 149, 51, .1), rgba(243, 112, 85, .1) 15%, rgba(239, 78, 123, .1) 30%, rgba(161, 102, 171, .1) 44%, rgba(80, 115, 184, .1) 58%, rgba(16, 152, 173, .1) 72%, rgba(7, 179, 155, .1) 86%, rgba(109, 186, 130, .1))
+}
+
+
+/* 页脚透明渐变 */
+
+#footer {
+    background: rgba(255, 255, 255, .15);
+    color: #000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    backdrop-filter: saturate(100%) blur(5px)
+}
+
+#footer::before {
+    background: rgba(255, 255, 255, .15)
+}
+
+#footer #footer-wrap {
+    color: var(--font-color)
+}
+
+#footer #footer-wrap a {
+    color: var(--font-color)
+}
+
+
+/* 列表，标题设置 */
+
+#article-container.post-content ol>li:before {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 20px;
+    margin-left: -5px
+}
+
+#article-container.post-content ol p,
+#article-container.post-content ul p {
+    margin: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Candy, sans-serif;
+    font-weight: 400
+}
+
+h1 {
+    font-size: 30px
+}
+
+h2 {
+    font-size: 26px
+}
+
+h3 {
+    font-size: 23px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 18px;
+    color: var(--hassan-gray-darker)
+}
+
+#article-container h1 {
+    padding-left: 2.3rem
+}
+
+#article-container h2 {
+    padding-left: 2.2rem
+}
+
+#article-container h3 {
+    padding-left: 2.1rem
+}
+
+#article-container h4 {
+    padding-left: 1.9rem
+}
+
+#article-container h5 {
+    padding-left: 1.8rem
+}
+
+#article-container h6 {
+    padding-left: 1.8rem
+}
+
+#article-container {
+    overflow-wrap: break-word;
+}
+
+#article-container a {
+    color: rgb(98, 206, 196);
+}
+
+#article-container a:hover {
+    text-decoration: underline;
+}
+
+#article-container img {
+    display: block;
+    margin: 0px auto 0.8rem;
+}
+
+#article-container p {
+    margin: 0px 0px 0.8rem;
+}
+
+#article-container iframe {
+    margin: 0px 0px 1rem;
+}
+
+#article-container kbd {
+    margin: 0px 3px;
+    padding: 3px 5px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 3px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 3px, rgba(255, 255, 255, 0.6) 0px 2px 1px 0px inset;
+    color: rgb(52, 73, 94);
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 0.9em;
+    font-family: Monaco, "Ubuntu Mono", monospace;
+    line-height: 1em;
+}
+
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#article-container h4,
+#article-container h5,
+#article-container h6 {
+    transition: all 0.2s ease-out 0s;
+}
+
+#article-container h1::before,
+#article-container h2::before,
+#article-container h3::before,
+#article-container h4::before,
+#article-container h5::before,
+#article-container h6::before {
+    position: absolute;
+    top: calc(50% - 0.35rem);
+    color: rgba(173, 221, 250, 0.8);
+    content: "";
+    line-height: 1;
+    transition: all 0.2s ease-out 0s;
+}
+
+#article-container h1:hover::before,
+#article-container h2:hover::before,
+#article-container h3:hover::before,
+#article-container h4:hover::before,
+#article-container h5:hover::before,
+#article-container h6:hover::before {
+    color: rgb(129, 216, 207);
+}
+
+#article-container h1 {
+    padding-left: 1.4rem;
+}
+
+#article-container h1 code {
+    font-size: 1rem;
+}
+
+#article-container h1::before {
+    margin-left: -1.2rem;
+    font-size: 1rem;
+}
+
+#article-container h1:hover {
+    padding-left: 1.6rem;
+}
+
+#article-container h2 {
+    padding-left: 1.3rem;
+}
+
+#article-container h2 code {
+    font-size: 0.9rem;
+}
+
+#article-container h2::before {
+    margin-left: -1.1rem;
+    font-size: 0.9rem;
+}
+
+#article-container h2:hover {
+    padding-left: 1.5rem;
+}
+
+#article-container h3 {
+    padding-left: 1.2rem;
+}
+
+#article-container h3 code {
+    font-size: 0.8rem;
+}
+
+#article-container h3::before {
+    margin-left: -1rem;
+    font-size: 0.8rem;
+}
+
+#article-container h3:hover {
+    padding-left: 1.4rem;
+}
+
+#article-container h4 {
+    padding-left: 1.1rem;
+}
+
+#article-container h4 code {
+    font-size: 0.7rem;
+}
+
+#article-container h4::before {
+    margin-left: -0.9rem;
+    font-size: 0.7rem;
+}
+
+#article-container h4:hover {
+    padding-left: 1.3rem;
+}
+
+#article-container h5 {
+    padding-left: 1rem;
+}
+
+#article-container h5 code {
+    font-size: 0.6rem;
+}
+
+#article-container h5::before {
+    margin-left: -0.8rem;
+    font-size: 0.6rem;
+}
+
+#article-container h5:hover {
+    padding-left: 1.2rem;
+}
+
+#article-container h6 {
+    padding-left: 1rem;
+}
+
+#article-container h6 code {
+    font-size: 0.6rem;
+}
+
+#article-container h6::before {
+    margin-left: -0.8rem;
+    font-size: 0.6rem;
+}
+
+#article-container h6:hover {
+    padding-left: 1.2rem;
+}
+
+#article-container ol,
+#article-container ul {
+    margin-top: 0.4rem;
+    padding: 0px 0px 0px 0.8rem;
+    list-style: none;
+    counter-reset: li 0;
+}
+
+@media screen and (max-width: 768px) {
+    #article-container ol,
+    #article-container ul {
+        padding: 0px 0px 0px 0.4rem;
+    }
+}
+
+#article-container ol p,
+#article-container ul p {
+    margin: 0px 0px 0.5rem;
+}
+
+#article-container ol ol,
+#article-container ol ul,
+#article-container ul ol,
+#article-container ul ul {
+    padding-left: 0.6rem;
+}
+
+@media screen and (max-width: 768px) {
+    #article-container ol ol,
+    #article-container ol ul,
+    #article-container ul ol,
+    #article-container ul ul {
+        padding-left: 0.2rem;
+    }
+}
+
+#article-container ol li:not(.tab),
+#article-container ul li:not(.tab) {
+    position: relative;
+    margin: 0.2rem 0px;
+}
+
+#article-container ol li:hover::before,
+#article-container ul li:hover::before {
+    transform: rotate(360deg);
+}
+
+#article-container ol li::before,
+#article-container ul li::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgb(129, 216, 207);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.3s ease-out 0s;
+}
+
+#article-container ol>li:not(.tab) {
+    padding: 0.2em 0.2em 0.2em 1.8em;
+}
+
+#article-container ol>li::before {
+    margin-top: 0.65em;
+    width: 1.45em;
+    height: 1.45em;
+    border-radius: 0.725em;
+    content: counter(li);
+    counter-increment: li 1;
+    text-align: center;
+    font-size: 0.85em;
+    line-height: 1.45em;
+}
+
+#article-container ul>li:not(.tab) {
+    padding: 0.2em 0.2em 0.2em 1.4em;
+}
+
+#article-container ul>li:not(.tab):hover::before {
+    border-color: rgb(129, 216, 207);
+}
+
+#article-container ul>li:not(.tab)::before {
+    top: 0.78em;
+    width: 0.42em;
+    height: 0.42em;
+    border: 0.21em solid rgb(129, 216, 207);
+    border-radius: 0.42em;
+    background: 0px 0px;
+    content: "";
+    line-height: 0.42em;
+}
+
+#article-container> :last-child {
+    margin-bottom: 0px !important;
+}
+
+#article-container h1:before {
+    content: "H1";
+    margin: -.2rem 0 0 -2.3rem;
+    font-size: 25px
+}
+
+#article-container h2:before {
+    content: "H2";
+    margin: -.2rem 0 0 -2.2rem;
+    font-size: 23px
+}
+
+#article-container h3:before {
+    content: "H3";
+    margin: -.1rem 0 0 -2.1rem;
+    font-size: 21px
+}
+
+#article-container h4:before {
+    content: "H4";
+    margin: -.07rem 0 0 -1.9rem;
+    font-size: 18px
+}
+
+#article-container h5:before {
+    content: "H5";
+    margin: -.02rem 0 0 -1.8rem;
+    font-size: 16px
+}
+
+#article-container h6:before {
+    content: "H6";
+    margin: -.02rem 0 0 -1.8rem;
+    font-size: 16px
+}
+
+
+/* 圆角相关 */
+
+
+/* 修改图片圆角 */
+
+img[src*="#img-radius"] {
+    border-radius: 9px;
+}
+
+
+/* 侧边栏圆角 */
+
+#aside-content .card-widget {
+    border-radius: 25px;
+}
+
+
+/* 文章页圆角 */
+
+.layout>div:first-child:not(.recent-posts) {
+    border-radius: 25px;
+}
+
+
+/* 双栏卡片圆角 */
+
+#recent-posts>.recent-post-item {
+    border-radius: 25px;
+}
+
+
+/* github按钮圆角 */
+
+#card-info-btn {
+    border-radius: 25px;
+    overflow: hidden
+}
+
+#card-info-btn:before {
+    border-radius: 25px
+}
+
+
+/* 右侧小按钮圆角 */
+
+#rightside>div>button,
+#to_comment {
+    margin-right: 4px;
+    border-radius: 5px;
+}
+
+
+/* 翻页圆角 */
+
+#pagination a.extend,
+#pagination .page-number,
+#pagination span {
+    color: var(--font-color);
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    height: 1.6rem;
+    text-align: center;
+    line-height: 1.6rem;
+    display: inline-block;
+    min-width: 1.6rem;
+}
+
+
+/* 目录圆角 */
+
+#aside-content #card-toc .toc-content .toc-link.active {
+    border-radius: 8px;
+}
+
+/* 公告喇叭 */
+.fa-bullhorn:before {
+    content: "\f0a1";
+}
