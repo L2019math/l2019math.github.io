@@ -22,6 +22,13 @@ a#site-name {
 
 /* #page-header::before{background:transparent !important;} */
 
+/* 加粗颜色 */
+b, strong {
+    color: 	#00BFFF;
+}
+
+/* 斜体颜色 */
+
 
 /* 有序列表 */
 
