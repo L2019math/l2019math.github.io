@@ -22,10 +22,14 @@ a#site-name {
 
 /* #page-header::before{background:transparent !important;} */
 
+
 /* 加粗颜色 */
-b, strong {
-    color: 	#00BFFF;
+
+b,
+strong {
+    color: #00BFFF;
 }
+
 
 /* 斜体颜色 */
 
@@ -425,7 +429,7 @@ h6 {
 }
 
 #article-container ul>li:not(.tab):hover::before {
-    border-color: rgb(129, 216, 207);
+    border-color: #00BFFF;
 }
 
 #article-container ul>li:not(.tab)::before {
@@ -554,12 +558,16 @@ img[src*="#img-radius"] {
     border-radius: 8px;
 }
 
+
 /* 公告喇叭 */
+
 .fa-bullhorn:before {
     content: "\f0a1";
 }
 
+
 /* 无序列表小圆点 */
+
 #article-container li::marker {
     color: #49b1f5;
     font-weight: 600;
