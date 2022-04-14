@@ -19,8 +19,9 @@ a#site-name {
 
 /* top-img 去掉黑色不透明遮罩 */
 
-
-/* #page-header::before{background:transparent !important;} */
+#page-header::before {
+    background: transparent !important;
+}
 
 
 /* 加粗颜色 */
