@@ -239,6 +239,15 @@ h6 {
     transition: all 0.2s ease-out 0s;
 }
 
+#article-container h3::before {
+    position: absolute;
+    top: calc(50% - 0.35rem);
+    color: #dc3545;
+    content: "";
+    line-height: 1;
+    transition: all 0.2s ease-out 0s;
+}
+
 #article-container h1:hover::before,
 #article-container h2:hover::before,
 #article-container h3:hover::before,
