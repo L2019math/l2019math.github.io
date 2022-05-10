@@ -28,7 +28,7 @@ a#site-name {
 
 b,
 strong {
-    color: #00BFFF;
+    color: #dc3545;
 }
 
 
@@ -228,13 +228,12 @@ h6 {
 
 #article-container h1::before,
 #article-container h2::before,
-#article-container h3::before,
 #article-container h4::before,
 #article-container h5::before,
 #article-container h6::before {
     position: absolute;
     top: calc(50% - 0.35rem);
-    color: rgba(173, 221, 250, 0.8);
+    color: rgba(102, 165, 205, 0.8);
     content: "";
     line-height: 1;
     transition: all 0.2s ease-out 0s;
@@ -250,6 +249,8 @@ h6 {
 }
 
 #article-container h1 {
+    /* acwing */
+    text-align: center;
     padding-left: 1.4rem;
 }
 
@@ -285,6 +286,12 @@ h6 {
 
 #article-container h3 {
     padding-left: 1.2rem;
+    /* acwing */
+    font-size: 1.4em;
+    line-height: 1.43;
+    margin: 1.6em auto 1.2em;
+    padding-left: 9px;
+    border-left: 5px solid #f22f27;
 }
 
 #article-container h3 code {
@@ -449,19 +456,27 @@ h6 {
 }
 
 #article-container h1:before {
-    content: "H1";
     margin: -.2rem 0 0 -2.3rem;
     font-size: 25px
 }
 
+#article-container h1:after {
+    content: '';
+    display: block;
+    margin: 0.2em auto 0;
+    width: 100px;
+    height: 2px;
+    border-bottom: 2px solid var(--main-6);
+}
+
 #article-container h2:before {
-    content: "H2";
+    content: '# '!important;
+    color: #f22f27;
     margin: -.2rem 0 0 -2.2rem;
     font-size: 23px
 }
 
 #article-container h3:before {
-    content: "H3";
     margin: -.1rem 0 0 -2.1rem;
     font-size: 21px
 }
