@@ -61,6 +61,8 @@ strong {
 
 /* 全局背景透明渐变 */
 
+
+/* 
 #recent-posts>.recent-post-item,
 .layout_page>div:first-child:not(.recent-posts),
 .layout_post>#page,
@@ -80,6 +82,8 @@ strong {
 
 /* 页脚透明渐变 */
 
+
+/* 
 #footer {
     background: rgba(255, 255, 255, .15);
     color: #000;
@@ -98,9 +102,9 @@ strong {
 
 #footer #footer-wrap a {
     color: var(--font-color)
-}
+} */
 
-
+*/
 /* 列表，标题设置 */
 
 #article-container.post-content ol>li:before {
