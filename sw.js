@@ -202,5 +202,5 @@ const handle = async function(req) {
             .then(res => res.arrayBuffer()) //arrayBuffer最科学也是最快的返回
             .then(buffer => new Response(buffer, { headers: { "Content-Type": "text/html;charset=utf-8" } })) //重新定义header
     }
-
+    return fetch(req)
 }
