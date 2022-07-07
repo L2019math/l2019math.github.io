@@ -173,17 +173,23 @@ self.db = { //全局定义db,只要read和write,看不懂可以略过
     }
 }
 
-
+const set_newest_version = async(mirror) => { //改为最新版本写入数据库
+    return lfetch(mirror, mirror[0])
+        .then(res => res.json()) //JSON Parse
+        .then(async res => {
+            await db.write('blog_version', res.version) //写入
+            return;
+        })
+}
 
 setInterval(async() => {
     await set_newest_version(mirror) //定时更新,一分钟一次
 }, 60 * 1000);
 
 setTimeout(async() => {
-    await set_newest_version(mirror) //打开五秒后更新,避免堵塞
-}, 5000)
-
-//主控函数
+        await set_newest_version(mirror) //打开五秒后更新,避免堵塞
+    }, 5000)
+    //主控函数
 const handle = async function(req) {
     const urlStr = req.url
     const urlObj = new URL(urlStr);
