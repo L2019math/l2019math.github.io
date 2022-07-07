@@ -192,7 +192,7 @@ const handle = async function(req) {
     if (domain === "selfknow.cn") { //这里写你需要拦截的域名
         //从这里开始处理
         return lfetch( //若第一次没有,则使用初始版本1.1.4,或者你也可以改成latest(不推荐)
-                generate_blog_urls('chenyfan-blog', await db.read('blog_version') || '1.1.4', fullpath(urlPath)))
+                generate_blog_urls('selfknow.cn', await db.read('blog_version') || '1.1.4', fullpath(urlPath)))
             .then(res => res.arrayBuffer()) //arrayBuffer最科学也是最快的返回
             .then(buffer => new Response(buffer, { headers: { "Content-Type": "text/html;charset=utf-8" } })) //重新定义header
     }
