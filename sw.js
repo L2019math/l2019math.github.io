@@ -140,6 +140,60 @@ const generate_blog_urls = (packagename, blogversion, path) => {
     }
     return npmmirror
 }
+
+const mirror = [
+    `https://registry.npmmirror.com/chenyfan-blog/latest`,
+    `https://registry.npmjs.org/chenyfan-blog/latest`,
+    `https://mirrors.cloud.tencent.com/npm/chenyfan-blog/latest`
+]
+const get_newest_version = async(mirror) => {
+    return lfetch(mirror, mirror[0])
+        .then(res => res.json())
+        .then(res.version)
+}
+
+self.db = { //全局定义db,只要read和write,看不懂可以略过
+    read: (key, config) => {
+        if (!config) { config = { type: "text" } }
+        return new Promise((resolve, reject) => {
+            caches.open(CACHE_NAME).then(cache => {
+                cache.match(new Request(`https://LOCALCACHE/${encodeURIComponent(key)}`)).then(function(res) {
+                    if (!res) resolve(null)
+                    res.text().then(text => resolve(text))
+                }).catch(() => {
+                    resolve(null)
+                })
+            })
+        })
+    },
+    write: (key, value) => {
+        return new Promise((resolve, reject) => {
+            caches.open(CACHE_NAME).then(function(cache) {
+                cache.put(new Request(`https://LOCALCACHE/${encodeURIComponent(key)}`), new Response(value));
+                resolve()
+            }).catch(() => {
+                reject()
+            })
+        })
+    }
+}
+
+const set_newest_version = async(mirror) => { //改为最新版本写入数据库
+    return lfetch(mirror, mirror[0])
+        .then(res => res.json()) //JSON Parse
+        .then(async res => {
+            await db.write('blog_version', res.version) //写入
+            return;
+        })
+}
+
+setInterval(async() => {
+    await set_newest_version(mirror) //定时更新,一分钟一次
+}, 60 * 1000);
+
+setTimeout(async() => {
+    await set_newest_version(mirror) //打开五秒后更新,避免堵塞
+}, 5000)
 const handle = async(req) => {
     const urlStr = req.url
     const urlObj = new URL(urlStr);
@@ -149,7 +203,8 @@ const handle = async(req) => {
 
     if (domain === "www.selfknow.cn") { //这里写你需要拦截的域名
         //从这里开始处理
-        return lfetch(generate_blog_urls('www.selfknow.cn', '1.1.9', fullpath(urlPath)))
+        return lfetch( //若第一次没有,则使用初始版本1.1.4,或者你也可以改成latest(不推荐)
+                generate_blog_urls('www.selfknow.cn', await db.read('blog_version') || '1.1.4', fullpath(urlPath)))
             .then(res => res.arrayBuffer()) //arrayBuffer最科学也是最快的返回
             .then(buffer => new Response(buffer, { headers: { "Content-Type": "text/html;charset=utf-8" } })) //重新定义header
     }
