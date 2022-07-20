@@ -201,6 +201,7 @@ h6 {
 #article-container p {
     margin: 0px 0px 0.8rem;
     color: black;
+    /*font-size: 20px;*/
 }
 
 #article-container iframe {
