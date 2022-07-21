@@ -52,7 +52,7 @@ strong {
     position: absolute;
     top: 0px;
     left: 0px;
-    background: rgb(129, 216, 207);
+    background: rgb(129 188 208);
     color: rgb(255, 255, 255);
     cursor: pointer;
     transition: all 0.3s ease-out 0s;
@@ -459,7 +459,7 @@ h6 {
     top: 0.78em;
     width: 0.42em;
     height: 0.42em;
-    border: 0.21em solid rgb(129, 216, 207);
+    border: 0.21em solid rgb(115 178 204);;
     border-radius: 0.42em;
     background: 0px 0px;
     content: "";
